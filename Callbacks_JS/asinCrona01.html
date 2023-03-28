@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1> Esta es la asincrnia mas recomentada </h1>
+        <p>La asincornia se usa cuando estamos esperando una pecicion de una Api para consumir los servicios <br> una
+            vez que lleguen se cargen :) </p>
+        <br>
+        <script>
+
+			/*Las Promesas reciben 2 parametros 
+			resolve y reject 
+			el resulve es el positivo 
+			el reject es el negativo si no se cumple 
+			*/
+            function cuadroPromesas(value) {
+                if (typeof value !== "number") {
+                    return Promise.reject("Error el " + value+ " no es una promesa");
+                }
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve({
+                            value,
+                            result: value * value
+                        });
+                    }, 0 | Math.random() * 1000);
+                })
+            }
+
+            async function funcionAsuncionaDeclarada() {
+                try {
+
+                    console.log("Inicio Asincronia");
+                    // await funciona como el costrictor->  cuando ya se tiene la promesa se envia los valores
+                    let obj = await cuadroPromesas(0);
+                    console.log(`Async Fuction: ${obj.value}, ${obj.result}}`);
+
+                    obj = await cuadroPromesas(1);
+                    console.log(`Async Fuction: ${obj.value}, ${obj.result}}`);
+
+                    obj = await cuadroPromesas(2);
+                    console.log(`Async Fuction: ${obj.value}, ${obj.result}}`);
+
+                    obj = await cuadroPromesas(3);
+                    console.log(`Async Fuction: ${obj.value}, ${obj.result}}`);
+
+                    obj = await cuadroPromesas(4);
+                    console.log(`Async Fuction: ${obj.value}, ${obj.result}}`);
+
+                    obj = await cuadroPromesas("5");
+                    console.log(`Async Fuction: ${obj.value}, ${obj.result}}`);
+
+
+                    console.log("Fin de la Asincronia");
+
+                } catch (err) {
+                    console.error(err);
+                }
+
+            }
+
+
+            funcionAsuncionaDeclarada();
+
+
+            
+            //otro ejemplo usando funciones expresadas
+
+            const funcionAsincronaExpresada = async ()=> {
+                try {
+
+                    console.log("Inicio Asincronia Expresada ");
+                    // await funciona como el costrictor->  cuando ya se tiene la promesa se envia los valores
+                    let obj = await cuadroPromesas(6);
+                    console.log(`Async Fuction: ${obj.value}, ${obj.result}}`);
+
+                    obj = await cuadroPromesas(7);
+                    console.log(`Async Fuction: ${obj.value}, ${obj.result}}`);
+
+                    obj = await cuadroPromesas(8);
+                    console.log(`Async Fuction: ${obj.value}, ${obj.result}}`);
+
+                    obj = await cuadroPromesas(9);
+                    console.log(`Async Fuction: ${obj.value}, ${obj.result}}`);
+
+                    console.log(`Async Fuction: ${obj.value}, ${obj.result}}`);
+
+
+                    console.log("Fin de la Asincronia");
+
+                } catch (err) {
+                    console.error(err);
+                }
+
+            }
+
+            funcionAsincronaExpresada();
+
+        </script>
+    </body>
+
+</html>
