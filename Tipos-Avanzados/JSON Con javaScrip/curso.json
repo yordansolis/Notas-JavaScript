@@ -1,0 +1,36 @@
+{
+    "nombre": "Jordan",
+    "apellido": "Solis",
+    "lengiajes": [
+        "JavaScrio",
+        "Python",
+        "C++"
+    ],
+    "edad": 30,
+    "experiencia": [
+        {
+            "empresa": "Microsoft",
+            "años": 15,
+            "estado": true
+        },
+        {
+            "empresa": "Asotich",
+            "años": 5,
+            "estado": false
+        }
+    ],
+    "direccion": {
+        "calle": "asd",
+        "numero": 40,
+        "pago_agua": [
+            {
+                "id": 0,
+                "fecha": "Abril 2017"
+            },
+            {
+                "id": 1,
+                "fecha": "Febrero 2022"
+            }
+        ]
+    }
+}
