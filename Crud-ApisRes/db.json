@@ -1,0 +1,19 @@
+{
+  "santos": [
+    {
+      "nombre": "Jordan",
+      "ocupacion": "Ing",
+      "id": 1
+    },
+    {
+      "nombre": "solis",
+      "ocupacion": "estudiant",
+      "id": 3
+    },
+    {
+      "nombre": "popeye",
+      "ocupacion": "estudiante",
+      "id": 4
+    }
+  ]
+}
